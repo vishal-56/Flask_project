@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+
+{% block title %}
+<title>Login</title>
+{% endblock title %}
+
+{% block body %}
+
+
+<div class="container mt-5">
+    <h1 class="text-center" style="margin-bottom: 30px; color: #333;">Login Page</h1>
+    <form method="POST" action="/login"
+        style="padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: #fff; max-width: 400px; margin: auto;">
+        <div style="margin-bottom: 15px;">
+            <label for="username"
+                style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Username</label>
+            <input type="text" id="username" name="username"
+                style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" required>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <label for="password"
+                style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Password</label>
+            <input type="password" id="password" name="password"
+                style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" required>
+        </div>
+        <button type="submit"
+            style="width: 100%; padding: 10px; background-color: #007bff; border: none; border-radius: 4px; color: #fff; font-size: 16px; cursor: pointer;">
+            Login
+        </button>
+    </form>
+</div>
+{% endblock body %}
